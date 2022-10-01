@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    background-color: var(--bacground-color);
+
+    & > *:not(:first-child) {
+        margin-top: 16px;
+    }
+}

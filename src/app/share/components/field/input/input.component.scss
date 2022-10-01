@@ -1,0 +1,17 @@
+:host {
+    display: inline-block;
+    width: 100%;
+
+    & > * {
+        width: 100%;
+    }
+}
+
+.error {
+    font-size: 12px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    color: var(--error-color, red);
+    white-space: nowrap;
+}

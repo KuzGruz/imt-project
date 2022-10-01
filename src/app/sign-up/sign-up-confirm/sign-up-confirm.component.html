@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="signUp()">
+    <imt-input filedLabel="Confirm code"
+               formControlName="code"
+               [showValidate]="submitted$ | async"
+               [required]="true">
+    </imt-input>
+    <imt-button>Confirm</imt-button>
+</form>

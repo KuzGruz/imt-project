@@ -1,0 +1,14 @@
+<header>
+    <h1>Imt Project</h1>
+</header>
+
+<div class="user" *ngIf="user$ | async as user; else link">
+    <span>Nice to meet you {{user.name.title}} {{user.name.first}} {{user.name.last}}!</span>
+    <img [src]="user.picture.large" [alt]="user.name.first">
+    <imt-button (onclick)="logout()">Log out</imt-button>
+</div>
+
+<ng-template #link>
+    <router-outlet></router-outlet>
+</ng-template>
+

@@ -1,0 +1,14 @@
+form > *:not(:first-child) {
+    margin-top: 24px
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: var(--error-color, red);
+}

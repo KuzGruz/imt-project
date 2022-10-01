@@ -1,0 +1,22 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>{{filedLabel}}</mat-label>
+    <input matInput
+           [type]="computedType"
+           [ngModel]="value"
+           [required]="showValidateInFiled"
+           (ngModelChange)="changeValue($event)">
+    <button matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            [disabled]="!value"
+            (click)="clear($event)">
+        <mat-icon>close</mat-icon>
+    </button>
+    <button *ngIf="isPassword" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <ng-container *imtLet="value | errorMessage : control as errorMessage">
+        <div class="error" *ngIf="errorMessage && showValidateInFiled">{{errorMessage}}</div>
+    </ng-container>
+</mat-form-field>

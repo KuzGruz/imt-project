@@ -1,0 +1,9 @@
+:host {
+    display: inline-block;
+}
+
+a {
+    cursor: pointer;
+    color: var(--primary-color, #ce5ce3);
+    text-decoration: none;
+}

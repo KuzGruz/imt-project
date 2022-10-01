@@ -1,0 +1,9 @@
+<span *ngIf="loading$ | async; else form">Loading....</span>
+
+<ng-template #form>
+    <section [ngSwitch]="step$ | async">
+        <h3>{{stepTitle$ | async}}</h3>
+        <imt-sign-up-form *ngSwitchCase="0"></imt-sign-up-form>
+        <imt-sign-up-confirm *ngSwitchCase="1"></imt-sign-up-confirm>
+    </section>
+</ng-template>

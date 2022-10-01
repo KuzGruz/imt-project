@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="signUp()">
+    <imt-input filedLabel="E-mail"
+               formControlName="email"
+               [showValidate]="submitted$ | async"
+               [required]="true">
+    </imt-input>
+    <imt-input filedLabel="Password"
+               type="password"
+               formControlName="password"
+               [showValidate]="submitted$ | async"
+               [required]="true">
+    </imt-input>
+    <imt-input filedLabel="Confirm password"
+               type="password"
+               formControlName="confirmPassword"
+               [showValidate]="submitted$ | async"
+               [required]="true">
+    </imt-input>
+    <div class="error" *ngIf="form.hasError('passwordMismatch') && (submitted$ | async)">
+        Passwords don't match
+    </div>
+    <imt-button>Sing Up</imt-button>
+</form>

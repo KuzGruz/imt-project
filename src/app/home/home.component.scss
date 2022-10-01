@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .sign-up {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill">
+    <mat-label>{{filedLabel}}</mat-label>
+    <mat-select [ngModel]="selectedCode" (ngModelChange)="select($event)" [required]="showValidateInFiled">
+        <mat-option *ngFor="let item of items" [value]="item.code">{{item.title}}</mat-option>
+    </mat-select>
+    <button matSuffix
+            [disabled]="!selectedCode"
+            mat-icon-button
+            aria-label="Clear"
+            (click)="clear($event)">
+        <mat-icon>close</mat-icon>
+    </button>
+    <mat-error *ngIf="selectedCode | errorMessage : control as errorMessage">{{errorMessage}}</mat-error>
+</mat-form-field>

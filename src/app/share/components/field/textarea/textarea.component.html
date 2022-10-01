@@ -1,0 +1,17 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>{{filedLabel}}</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              [ngModel]="value"
+              [required]="showValidateInFiled"
+              (ngModelChange)="changeValue($event)">
+    </textarea>
+    <button matSuffix
+            [disabled]="!value"
+            mat-icon-button
+            aria-label="Clear"
+            (click)="clear($event)">
+        <mat-icon>close</mat-icon>
+    </button>
+    <mat-error *ngIf="value | errorMessage : control as errorMessage">{{errorMessage}}</mat-error>
+</mat-form-field>

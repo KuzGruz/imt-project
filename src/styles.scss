@@ -1,0 +1,8 @@
+@use 'src/styles/reset';
+@use 'src/styles/variables';
+@use 'src/styles/font';
+
+html, body {
+    height: 100%;
+    color: var(--text-color);
+}
