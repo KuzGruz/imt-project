@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from './share/components/button/button.module';
+import { ThemeModule } from './theme/theme.module';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { ButtonModule } from './share/components/button/button.module';
         FieldModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        ButtonModule
+        ButtonModule,
+        ThemeModule
     ],
     declarations: [ImtComponent, HomeComponent],
     bootstrap: [ImtComponent]

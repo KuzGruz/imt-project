@@ -1,6 +1,18 @@
-:root {
+// TODO сделать нормальную цветовую гамму для цветов
+// Определить цвета, для каждой из тем более детально
+// Покапаться в изменеии цветов MaterialUI
+:root body {
     --primary-color: #673ab7;
-    --bacground-color: #f8f6f6;
+    --main-background-color: #fcfcfc;
+    --background-color: #f8f6f6;
     --error-color: #d71d1d;
     --text-color: #181818;
+
+    &.dark {
+        --primary-color: #673ab7;
+        --main-background-color: #474062;
+        --background-color: #474062;
+        --error-color: #d71d1d;
+        --text-color: #ffffff;
+    }
 }
